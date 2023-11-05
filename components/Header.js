@@ -68,13 +68,12 @@ export default function Header() {
     <header className="justify-between w-full px-4 pt-12 pb-16 mx-auto sm:flex max-w-screen-2xl">
       <div>
         <h1 className="text-5xl">
-          <Link href="/">Places to Read</Link>
+          <Link href="/">Places to Eat</Link>
         </h1>
         <p className="max-w-md mt-1">
-          Parks around the world handpicked by the internet that are perfect to
-          sit down in and enjoy a book.
+          Handpicked places to eat from around the world.
         </p>
-        {route === "/" ? (
+        {/*{route === "/" ? (
           <Link href="/about" className="flex items-center mt-4 gap-x-1 w-fit">
             About <Arrow />
           </Link>
@@ -83,10 +82,10 @@ export default function Header() {
             <Arrow className="rotate-180" />
             Home
           </Link>
-        )}
+        )}*/}
       </div>
       <div className="flex items-start mt-4 sm:mt-0 gap-x-2">
-        <Dialog.Root>
+        {/*<Dialog.Root>
           <Dialog.Trigger asChild>
             <Button>Submit a place</Button>
           </Dialog.Trigger>
@@ -169,7 +168,7 @@ export default function Header() {
               )}
             </form>
           </Dialog.Content>
-        </Dialog.Root>
+        </Dialog.Root>*/}
         {/* <Button>Share feedback</Button> */}
       </div>
     </header>

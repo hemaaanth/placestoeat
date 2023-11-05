@@ -4,7 +4,7 @@ export default function About() {
   return (
     <main className="w-full px-4 mx-auto max-w-screen-2xl">
       <div className="flex flex-col max-w-2xl gap-4 text-lg w-fit">
-        <p>
+        {/*<p>
           Built this project to practice my design skills, specifically working
           with a limited set of colours and font sizes. This project was deeply
           inspired by{" "}
@@ -39,7 +39,7 @@ export default function About() {
         </p>
         <p className="text-sm">
           Featured on Read.cv, Minimal Gallery and Where I Would Like to Read{" "}
-        </p>
+        </p>*/}
       </div>
     </main>
   );

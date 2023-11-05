@@ -48,15 +48,14 @@ export default function Home({ parks }) {
       parkName,
       city,
       country,
-      notableFeature,
+      lastVisited,
       latitude,
       longitude,
       locationLink,
       description,
       submittedByLink,
       submittedByHandle,
-      suggestedBook,
-      suggestedBookLink,
+      suggestedDishes,
     } = props;
 
     return (
@@ -66,7 +65,7 @@ export default function Home({ parks }) {
             <h2>{parkName}</h2>
             <div>{city}</div>
             <div>{country}</div>
-            <div>{notableFeature}</div>
+            <div>{lastVisited}</div>
             <Link
               href={locationLink}
               isExternal
@@ -85,16 +84,10 @@ export default function Home({ parks }) {
                 <p>{description}</p>
                 <div className="flex leading-none gap-x-10">
                   <div>
-                    <h3 className="text-sm mb-1.5">Recommended reading</h3>
-                    <Link
-                      href={suggestedBookLink}
-                      isExternal
-                      className="underline transition hover:bg-sally/50 underline-offset-4"
-                    >
-                      {suggestedBook}
-                    </Link>
+                    <h3 className="text-sm mb-1.5">Recommended dish(es)</h3>
+                      {suggestedDishes}
                   </div>
-                  <div>
+                  {/*<div>
                     <h3 className="text-sm mb-1.5">Submitted by</h3>
                     {submittedByHandle ? (
                       <Link
@@ -107,8 +100,8 @@ export default function Home({ parks }) {
                     ) : (
                       <p>{submittedByLink}</p>
                     )}
-                  </div>
-                  <Link
+                    </div>*/}
+                  {/*<Link
                     href={`https://www.google.com/maps/search/?api=1&query@${encodeURIComponent(
                       latitude + "," + longitude
                     )}`}
@@ -116,7 +109,7 @@ export default function Home({ parks }) {
                     isExternal
                   >
                     Get directions
-                  </Link>
+                  </Link>*/}
                 </div>
               </div>
             </div>
@@ -137,8 +130,7 @@ export default function Home({ parks }) {
       description,
       submittedByLink,
       submittedByHandle,
-      suggestedBook,
-      suggestedBookLink,
+      suggestedDishes,
       id,
     } = props;
     return (
@@ -146,7 +138,7 @@ export default function Home({ parks }) {
         <li>
           <Collapsible.Trigger className="flex justify-center items-center gap-x-4 w-full pr-4 group">
             <div className="bg-mcqueen text-white px-4 py-6 z-10 w-full max-w-[3.5rem] -mb-px tabular-nums">
-              {id.padStart(2, "0")}
+              {id ? id.toString().padStart(2, "0") : ""}
             </div>
             <div className="flex flex-col text-left">
               <span>{parkName}</span>
@@ -166,13 +158,7 @@ export default function Home({ parks }) {
                 <div className="flex flex-col mt-8 items-baseline leading-none bg-mcqueen/5 text-sm -mx-4 divide-y divide-mcqueen border-t border-mcqueen">
                   <div className="w-full py-3 flex flex-row justify-between px-4">
                     <h3>Recommended reading</h3>
-                    <Link
-                      href={suggestedBookLink}
-                      isExternal
-                      className="underline transition hover:bg-sally/50 underline-offset-4 w-fit"
-                    >
-                      {suggestedBook}
-                    </Link>
+                      {suggestedDishes}
                   </div>
                   <div className="w-full py-3 flex flex-row justify-between px-4">
                     <h3>Submitted by</h3>
@@ -220,7 +206,7 @@ export default function Home({ parks }) {
             <li className="pl-12 ml-1.5">Park</li>
             <li>City</li>
             <li>Country</li>
-            <li>Notable Feature</li>
+            <li>Visited</li>
             <li className="pl-4">Map</li>
           </ul>
         </div>
