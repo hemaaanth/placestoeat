@@ -157,7 +157,7 @@ export default function Home({ parks }) {
                 <p className="max-w-prose">{description}</p>
                 <div className="flex flex-col mt-8 items-baseline leading-none bg-mcqueen/5 text-sm -mx-4 divide-y divide-mcqueen border-t border-mcqueen">
                   <div className="w-full py-3 flex flex-row justify-between px-4">
-                    <h3>Recommended reading</h3>
+                    <h3>Recommended dish(es)</h3>
                     {suggestedDishes}
                   </div>
                   <div className="w-full py-3 flex flex-row justify-between px-4">
