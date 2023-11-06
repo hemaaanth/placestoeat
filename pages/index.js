@@ -85,9 +85,9 @@ export default function Home({ parks }) {
                 <div className="flex leading-none gap-x-10">
                   <div>
                     <h3 className="text-sm mb-1.5">Recommended dish(es)</h3>
-                      {suggestedDishes}
+                    {suggestedDishes}
                   </div>
-                  {/*<div>
+                  <div>
                     <h3 className="text-sm mb-1.5">Submitted by</h3>
                     {submittedByHandle ? (
                       <Link
@@ -100,7 +100,7 @@ export default function Home({ parks }) {
                     ) : (
                       <p>{submittedByLink}</p>
                     )}
-                    </div>*/}
+                  </div>
                   {/*<Link
                     href={`https://www.google.com/maps/search/?api=1&query@${encodeURIComponent(
                       latitude + "," + longitude
@@ -158,7 +158,7 @@ export default function Home({ parks }) {
                 <div className="flex flex-col mt-8 items-baseline leading-none bg-mcqueen/5 text-sm -mx-4 divide-y divide-mcqueen border-t border-mcqueen">
                   <div className="w-full py-3 flex flex-row justify-between px-4">
                     <h3>Recommended reading</h3>
-                      {suggestedDishes}
+                    {suggestedDishes}
                   </div>
                   <div className="w-full py-3 flex flex-row justify-between px-4">
                     <h3>Submitted by</h3>
